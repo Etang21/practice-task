@@ -27,4 +27,4 @@ env.BuildStata(target  = ['#%s/data.txt'       % build],
 #                   log_ext = 'create_data',
 #                   env     = env)
 
-env.Install('#release/lg', '#%s/data.txt' % build)
+env.Install('#release/lg', '#%s' % build)

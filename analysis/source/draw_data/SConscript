@@ -1,0 +1,10 @@
+Import('env')
+
+build  = env['CONFIG']['global']['build']['draw_data']
+source = env['CONFIG']['global']['source']['draw_data']
+
+env.BuildPython(target  = ['#%s/data.csv'       % build],
+                source  = ['#%s/draw_data.py' % source],
+                log_ext =  'draw_data')
+
+env.Install('#release/lg', '#%s' % build)
