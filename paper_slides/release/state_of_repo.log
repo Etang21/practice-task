@@ -8,33 +8,23 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit d19ddc8f098f7d2f54a75d8ad297b154985b1be8
-Author: Adam Rosenberg <arosenbe@stanford.edu>
-Date:   Mon Feb 12 09:08:14 2018 -0800
+commit 8961132bc41af15c5c9b795be2588e284f05183f
+Author: Eric Tang <etang21@stanford.edu>
+Date:   Wed Jan 22 17:02:55 2020 -0800
 
-    #95 switch to scons 3
+    #164 Update analysis/source/descriptive to use data from Dropbox
 
 
 Files changed since last commit:
 
 
-README.md
-analysis/SConstruct
-analysis/config_global.yaml
 analysis/release/descriptive/plot.eps
 analysis/release/descriptive/sconscript_descriptive.log
+analysis/release/descriptive/table.txt
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
-analysis/source/descriptive/SConscript
-analysis/source/descriptive/descriptive.py
-analysis/source/prepare_data/SConscript
-analysis/source/prepare_data/create_data.m
-analysis/source/prepare_data/create_data.py
-analysis/source/prepare_data/create_data.r
-config/config_python.py
-config/configuration.py
-paper_slides/SConstruct
-paper_slides/config_global.yaml
+paper_slides/input/plot.eps
+paper_slides/input/table.txt
 paper_slides/release/paper/ondeck.pdf
 paper_slides/release/paper/online_appendix.pdf
 paper_slides/release/paper/paper.pdf
@@ -45,138 +35,126 @@ paper_slides/release/state_of_input.log
 paper_slides/release/state_of_repo.log
 paper_slides/release/talk/sconscript.log
 paper_slides/release/talk/slides.pdf
-paper_slides/source/paper/SConscript
-paper_slides/source/tables/SConscript
-paper_slides/source/talk/SConscript
 
 ===================================
 
  *** FILE STATUS ***
 
 ===================================
-./config_global.yaml:
-   modified on: 14 Feb 2018 21:10:52
-   size of file: 1283
 ./config_user.yaml:
-   modified on: 14 Feb 2018 20:12:51
-   size of file: 586
+   modified on: 22 Jan 2020 20:09:42
+   size of file: 646
 ./run.py:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 19 Jan 2020 13:28:28
    size of file: 458
-./SConstruct:
-   modified on: 14 Feb 2018 21:09:37
-   size of file: 1818
-./sconstruct.log:
-   modified on: 14 Feb 2018 21:11:14
-   size of file: 199
-./state_of_input.log:
-   modified on: 14 Feb 2018 21:11:14
-   size of file: 154
 ./state_of_repo.log:
-   modified on: 14 Feb 2018 21:11:14
-   size of file: 1509
-./build/paper/ondeck.pdf:
-   modified on: 14 Feb 2018 21:10:36
-   size of file: 18776
-./build/paper/online_appendix.pdf:
-   modified on: 14 Feb 2018 21:10:36
-   size of file: 45966
-./build/paper/paper.pdf:
-   modified on: 14 Feb 2018 21:10:37
-   size of file: 59075
-./build/paper/sconscript.log:
-   modified on: 14 Feb 2018 21:10:38
-   size of file: 339
-./build/paper/text.pdf:
-   modified on: 14 Feb 2018 21:10:38
-   size of file: 18776
-./build/tables/sconscript.log:
-   modified on: 14 Feb 2018 21:10:36
+   modified on: 22 Jan 2020 20:23:20
+   size of file: 1117
+./SConstruct:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 1818
+./state_of_input.log:
+   modified on: 22 Jan 2020 20:23:20
    size of file: 154
-./build/tables/table.lyx:
-   modified on: 14 Feb 2018 21:10:36
-   size of file: 4094
-./build/talk/sconscript.log:
-   modified on: 14 Feb 2018 21:10:40
-   size of file: 586
-./build/talk/slides.pdf:
-   modified on: 14 Feb 2018 21:10:40
-   size of file: 29958
+./config_global.yaml:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 1283
+./sconstruct.log:
+   modified on: 22 Jan 2020 20:23:20
+   size of file: 199
 ./input/plot.eps:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 15385
+   modified on: 22 Jan 2020 20:20:59
+   size of file: 11716
 ./input/table.txt:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 39
-./release/sconstruct.log:
-   modified on: 14 Feb 2018 21:11:11
-   size of file: 250
-./release/state_of_input.log:
-   modified on: 14 Feb 2018 21:11:11
-   size of file: 154
-./release/state_of_repo.log:
-   modified on: 14 Feb 2018 21:11:11
-   size of file: 5186
-./release/paper/ondeck.pdf:
-   modified on: 14 Feb 2018 21:10:36
-   size of file: 18776
-./release/paper/online_appendix.pdf:
-   modified on: 14 Feb 2018 21:10:36
-   size of file: 45966
-./release/paper/paper.pdf:
-   modified on: 14 Feb 2018 21:10:37
-   size of file: 59075
-./release/paper/sconscript.log:
-   modified on: 14 Feb 2018 21:10:38
-   size of file: 339
-./release/paper/text.pdf:
-   modified on: 14 Feb 2018 21:10:38
-   size of file: 18776
-./release/paper/text_latex.aux:
-   modified on: 14 Feb 2018 20:47:15
-   size of file: 166
-./release/paper/text_latex.log:
-   modified on: 14 Feb 2018 20:47:15
-   size of file: 20216
-./release/paper/text_latex.pdf:
-   modified on: 14 Feb 2018 20:47:15
-   size of file: 18776
-./release/talk/sconscript.log:
-   modified on: 14 Feb 2018 21:10:40
-   size of file: 586
-./release/talk/slides.pdf:
-   modified on: 14 Feb 2018 21:10:40
-   size of file: 29958
-./source/figures/figure.lyx:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 2214
-./source/paper/ondeck.lyx:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 2522
-./source/paper/online_appendix.lyx:
-   modified on: 09 Jan 2018 08:11:40
-   size of file: 3610
+   modified on: 22 Jan 2020 20:20:55
+   size of file: 60
 ./source/paper/paper.lyx:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 19 Jan 2020 13:28:28
    size of file: 5236
-./source/paper/SConscript:
-   modified on: 14 Feb 2018 21:10:11
-   size of file: 699
-./source/paper/text.lyx:
-   modified on: 09 Jan 2018 08:11:40
+./source/paper/online_appendix.lyx:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 3610
+./source/paper/ondeck.lyx:
+   modified on: 19 Jan 2020 13:28:28
    size of file: 2522
 ./source/paper/text.tex:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 19 Jan 2020 13:28:28
    size of file: 1300
+./source/paper/SConscript:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 699
+./source/paper/text.lyx:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 2522
 ./source/tables/SConscript:
-   modified on: 12 Feb 2018 10:23:10
+   modified on: 19 Jan 2020 13:28:28
    size of file: 266
 ./source/tables/table.lyx:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 19 Jan 2020 13:28:28
    size of file: 4082
-./source/talk/SConscript:
-   modified on: 12 Feb 2018 10:23:18
-   size of file: 259
+./source/figures/figure.lyx:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 2214
 ./source/talk/slides.lyx:
-   modified on: 09 Jan 2018 08:11:40
+   modified on: 19 Jan 2020 13:28:28
    size of file: 4697
+./source/talk/SConscript:
+   modified on: 19 Jan 2020 13:28:28
+   size of file: 259
+./release/state_of_repo.log:
+   modified on: 22 Jan 2020 20:21:24
+   size of file: 4520
+./release/state_of_input.log:
+   modified on: 22 Jan 2020 20:21:19
+   size of file: 154
+./release/sconstruct.log:
+   modified on: 22 Jan 2020 20:21:24
+   size of file: 2504
+./release/paper/paper.pdf:
+   modified on: 22 Jan 2020 20:21:21
+   size of file: 59323
+./release/paper/online_appendix.pdf:
+   modified on: 22 Jan 2020 20:10:12
+   size of file: 45569
+./release/paper/ondeck.pdf:
+   modified on: 22 Jan 2020 20:10:10
+   size of file: 18405
+./release/paper/sconscript.log:
+   modified on: 22 Jan 2020 20:21:21
+   size of file: 454
+./release/paper/text.pdf:
+   modified on: 22 Jan 2020 20:10:17
+   size of file: 18405
+./release/talk/slides.pdf:
+   modified on: 22 Jan 2020 20:21:23
+   size of file: 29898
+./release/talk/sconscript.log:
+   modified on: 22 Jan 2020 20:21:23
+   size of file: 456
+./build/paper/paper.pdf:
+   modified on: 22 Jan 2020 20:21:21
+   size of file: 59323
+./build/paper/online_appendix.pdf:
+   modified on: 22 Jan 2020 20:10:12
+   size of file: 45569
+./build/paper/ondeck.pdf:
+   modified on: 22 Jan 2020 20:10:10
+   size of file: 18405
+./build/paper/sconscript.log:
+   modified on: 22 Jan 2020 20:21:21
+   size of file: 454
+./build/paper/text.pdf:
+   modified on: 22 Jan 2020 20:10:17
+   size of file: 18405
+./build/tables/sconscript.log:
+   modified on: 22 Jan 2020 20:21:19
+   size of file: 154
+./build/tables/table.lyx:
+   modified on: 22 Jan 2020 20:21:19
+   size of file: 4110
+./build/talk/slides.pdf:
+   modified on: 22 Jan 2020 20:21:23
+   size of file: 29898
+./build/talk/sconscript.log:
+   modified on: 22 Jan 2020 20:21:23
+   size of file: 456
