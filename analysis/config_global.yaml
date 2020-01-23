@@ -7,6 +7,7 @@ build:
   load_data: build/load_data
   draw_data: build/draw_data
   descriptive: build/descriptive
+  plot: build/plot
 
 # Source Directories
 source:
@@ -14,6 +15,7 @@ source:
   load_data: source/load_data
   draw_data: source/draw_data
   descriptive: source/descriptive
+  plot: source/plot
 
 # Input Directories (will record contents)
 input:

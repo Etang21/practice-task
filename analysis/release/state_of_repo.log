@@ -8,33 +8,20 @@ as it can be edited after state_of_repo.log finishes running
 ===================================
 Last commit:
 
-commit 8961132bc41af15c5c9b795be2588e284f05183f
+commit b32b367e0a2cc617ca906497f23b5635f858a3fa
 Author: Eric Tang <etang21@stanford.edu>
-Date:   Wed Jan 22 17:02:55 2020 -0800
+Date:   Wed Jan 22 21:11:44 2020 -0800
 
-    #164 Update analysis/source/descriptive to use data from Dropbox
+    #164 Generate multivariate normal data for build/draw_data
 
 
 Files changed since last commit:
 
 
-analysis/release/descriptive/plot.eps
-analysis/release/descriptive/sconscript_descriptive.log
-analysis/release/descriptive/table.txt
+analysis/SConstruct
+analysis/config_global.yaml
 analysis/release/sconstruct.log
 analysis/release/state_of_repo.log
-paper_slides/input/plot.eps
-paper_slides/input/table.txt
-paper_slides/release/paper/ondeck.pdf
-paper_slides/release/paper/online_appendix.pdf
-paper_slides/release/paper/paper.pdf
-paper_slides/release/paper/sconscript.log
-paper_slides/release/paper/text.pdf
-paper_slides/release/sconstruct.log
-paper_slides/release/state_of_input.log
-paper_slides/release/state_of_repo.log
-paper_slides/release/talk/sconscript.log
-paper_slides/release/talk/slides.pdf
 
 ===================================
 
@@ -48,20 +35,32 @@ paper_slides/release/talk/slides.pdf
    modified on: 19 Jan 2020 13:28:28
    size of file: 449
 ./state_of_repo.log:
-   modified on: 22 Jan 2020 20:23:11
-   size of file: 1117
+   modified on: 22 Jan 2020 21:45:14
+   size of file: 576
 ./SConstruct:
-   modified on: 22 Jan 2020 16:47:37
-   size of file: 1916
+   modified on: 22 Jan 2020 21:34:24
+   size of file: 1995
 ./state_of_input.log:
-   modified on: 22 Jan 2020 20:23:11
+   modified on: 22 Jan 2020 21:45:13
    size of file: 267
 ./config_global.yaml:
-   modified on: 22 Jan 2020 16:49:43
-   size of file: 1361
+   modified on: 22 Jan 2020 21:34:56
+   size of file: 1459
 ./sconstruct.log:
-   modified on: 22 Jan 2020 20:23:11
-   size of file: 199
+   modified on: 22 Jan 2020 21:45:14
+   size of file: 217
+./source/plot/plot_data.py:
+   modified on: 22 Jan 2020 21:43:55
+   size of file: 779
+./source/plot/SConscript:
+   modified on: 22 Jan 2020 21:35:12
+   size of file: 363
+./source/draw_data/draw_data.py:
+   modified on: 22 Jan 2020 21:09:59
+   size of file: 444
+./source/draw_data/SConscript:
+   modified on: 22 Jan 2020 21:10:16
+   size of file: 325
 ./source/prepare_data/create_data.m:
    modified on: 19 Jan 2020 13:28:28
    size of file: 202
@@ -72,8 +71,8 @@ paper_slides/release/talk/slides.pdf
    modified on: 19 Jan 2020 13:28:28
    size of file: 262
 ./source/prepare_data/SConscript:
-   modified on: 20 Jan 2020 17:00:18
-   size of file: 1125
+   modified on: 22 Jan 2020 20:51:14
+   size of file: 1116
 ./source/prepare_data/create_data.py:
    modified on: 19 Jan 2020 13:28:28
    size of file: 260
@@ -81,23 +80,35 @@ paper_slides/release/talk/slides.pdf
    modified on: 19 Jan 2020 13:28:28
    size of file: 249
 ./source/descriptive/descriptive.py:
-   modified on: 22 Jan 2020 17:01:28
+   modified on: 22 Jan 2020 20:26:01
    size of file: 545
 ./source/descriptive/SConscript:
-   modified on: 22 Jan 2020 17:00:36
+   modified on: 22 Jan 2020 20:26:01
    size of file: 498
 ./source/load_data/SConscript:
-   modified on: 22 Jan 2020 16:49:58
+   modified on: 22 Jan 2020 20:26:01
    size of file: 508
 ./release/state_of_repo.log:
-   modified on: 22 Jan 2020 20:19:50
-   size of file: 4075
+   modified on: 22 Jan 2020 21:44:01
+   size of file: 4878
 ./release/state_of_input.log:
-   modified on: 22 Jan 2020 20:19:50
+   modified on: 22 Jan 2020 21:43:58
    size of file: 267
 ./release/sconstruct.log:
-   modified on: 22 Jan 2020 20:19:50
-   size of file: 282
+   modified on: 22 Jan 2020 21:44:01
+   size of file: 413
+./release/plot/plot.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 1250064
+./release/plot/x_histogram.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 16983
+./release/plot/sconscript_plot.log:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 96
+./release/plot/y_histogram.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 16780
 ./release/descriptive/sconscript_descriptive.log:
    modified on: 22 Jan 2020 17:01:46
    size of file: 96
@@ -107,7 +118,19 @@ paper_slides/release/talk/slides.pdf
 ./release/descriptive/table.txt:
    modified on: 22 Jan 2020 17:01:46
    size of file: 60
-./release/lg/data.txt:
+./release/lg/draw_data/data.csv:
+   modified on: 22 Jan 2020 21:10:25
+   size of file: 402408
+./release/lg/draw_data/sconscript_draw_data.log:
+   modified on: 22 Jan 2020 21:10:25
+   size of file: 96
+./release/lg/draw_data/data.txt:
+   modified on: 22 Jan 2020 21:01:08
+   size of file: 402424
+./release/lg/prepare_data/sconscript_create_data.log:
+   modified on: 20 Jan 2020 17:05:36
+   size of file: 1643
+./release/lg/prepare_data/data.txt:
    modified on: 20 Jan 2020 17:05:36
    size of file: 1988897
 ./release/lg/load_data/sconscript_load_data.log:
@@ -116,6 +139,24 @@ paper_slides/release/talk/slides.pdf
 ./release/lg/load_data/data.txt:
    modified on: 16 Jan 2018 08:28:52
    size of file: 3453388
+./build/plot/plot.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 1250064
+./build/plot/x_histogram.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 16983
+./build/plot/sconscript_plot.log:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 96
+./build/plot/y_histogram.eps:
+   modified on: 22 Jan 2020 21:44:00
+   size of file: 16780
+./build/draw_data/data.csv:
+   modified on: 22 Jan 2020 21:10:25
+   size of file: 402408
+./build/draw_data/sconscript_draw_data.log:
+   modified on: 22 Jan 2020 21:10:25
+   size of file: 96
 ./build/prepare_data/sconscript_create_data.log:
    modified on: 20 Jan 2020 17:05:36
    size of file: 1643
