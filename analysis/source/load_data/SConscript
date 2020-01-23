@@ -2,12 +2,13 @@ Import('env')
 import gslab_scons as gs
 
 build  = env['CONFIG']['global']['build']['load_data']
-data   = env['CONFIG']['user']['input']['load_data']
+data   = env['CONFIG']['global']['input']['load_data']
+remote = env['CONFIG']['user']['input']['remote']
 base   = Dir('#.').path
 
-gs.build_anything(target  = ['#%s/data.txt'                     % (build)],
+gs.build_anything(target  = ['#%s/data.txt' % (build)],
 			      source  = [''],
-			      action  = 'rclone copy %s/data.txt %s/%s'  % (data, base, build),
+			      action  = 'rclone copy %s:%s/data.txt %s/%s' % (remote, data, base, build),
                   log_ext = 'load_data',
                   env     = env)
 

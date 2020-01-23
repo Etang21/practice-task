@@ -14,7 +14,8 @@ source:
   descriptive: source/descriptive
 
 # Input Directories (will record contents)
-input: None
+input:
+  load_data: gslab_data/raw/ra_practice_task
 
 # Executable names
 executable_names:
